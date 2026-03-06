@@ -228,13 +228,7 @@ main{
     border-right: solid gray 1px;
     padding-right: 10px;
 }
-.min{
-    display: none;
-    color: white;
-    text-align: left;
-}
-.rec{
-    display: block;
+.version_accessories{
     color: white;
     text-align: left;
 }

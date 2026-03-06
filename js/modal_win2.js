@@ -11,30 +11,57 @@ const minPrice = document.querySelectorAll(".min")
 recommended_equipment.addEventListener("click",switchmax)
 min_equipment.addEventListener("click",switchmin)
 
+let idTarget
 
+const gameInfo = [
+    {
+        name:'gta5',
+        card: {rec: '1', min : '2',},
+        processor: {rec: '',min: ''},
+        access:{rec: '', min: ''},
+        motherBoard: {rec: '', min: ''},
+        ssd:{rec:'',min:''},
+        powerUnit: {rec: '',min:''},
+        body: {rec: '',min:''}
+    },
+    {
+        name:'gta6',
+        card: {rec: '3', min : '4',},
+        processor: {rec: '',min: ''},
+        access:{rec: '', min: ''},
+        motherBoard: {rec: '', min: ''},
+        ssd:{rec:'',min:''},
+        powerUnit: {rec: '',min:''},
+        body: {rec: '',min:''}
+    },
+    {
+        name:'RDR',
+        card: {rec: '5', min : '6',},
+        processor: {rec: '',min: ''},
+        access:{rec: '', min: ''},
+        motherBoard: {rec: '', min: ''},
+        ssd:{rec:'',min:''},
+        powerUnit: {rec: '',min:''},
+        body: {rec: '',min:''}
+    }
+]
 function switchmin(){
     setTimeout(() => {
-        document.querySelector(".img_choice_min").style.opacity = "1"
-        document.querySelector(".img_choice_rec").style.opacity = "0"
-    },100)
-    document.querySelectorAll('.min').forEach(visual =>{
-        visual.style.display = "block"
-    })
-    document.querySelectorAll('.rec').forEach(visual =>{
-        visual.style.display = "none"
-    })
+        ModalWin.querySelector(".img_choice_min").style.opacity = "1"
+        ModalWin.querySelector(".img_choice_rec").style.opacity = "0"
+    },10)
+    const oobject = gameInfo.find((item) => item.name === idTarget);
+    ModalWin.querySelector('.card').textContent = oobject.card.rec
 }
 function switchmax(){
     setTimeout(() => {
-    document.querySelector(".img_choice_min").style.opacity = "0"
-    document.querySelector(".img_choice_rec").style.opacity = "1"
-    }, 100)
-    document.querySelectorAll('.min').forEach(visual =>{
-        visual.style.display = "none"
-    })
-    document.querySelectorAll('.rec').forEach(visual =>{
-        visual.style.display = "block"
-    })
+        ModalWin.querySelector(".img_choice_min").style.opacity = "0"
+        ModalWin.querySelector(".img_choice_rec").style.opacity = "1"
+    }, 10)
+    const oobject = gameInfo.find((item) => item.name === idTarget);
+    console.log(oobject);
+    
+    ModalWin.querySelector('.card').textContent = oobject.card.min
 }
 
 
@@ -77,6 +104,8 @@ function createSlider(gameBlock) {
             ModalWinMain.style.scale = '1'
             ModalWin.style.opacity = '1'
         },20);
+        const oobject = gameInfo.find((item) => item.name === idTarget);
+        ModalWin.querySelector('.card').textContent = oobject.card.rec
     }
 
     // Функции для этого слайдера
@@ -121,7 +150,12 @@ function createSlider(gameBlock) {
     sliderData.nextBtn.addEventListener('click', nextSlide);
     
     sliderData.openModalBtn.addEventListener('click', openModalWin);
+        sliderData.openModalBtn.addEventListener('click', function ltarget(e){
+        idTarget = e.target.id
+        console.log(idTarget);   
+    });
 
+    
     // Пауза при наведении
     sliderData.container.addEventListener('mouseenter', () => {
         if (sliderData.isAutoPlaying) {
