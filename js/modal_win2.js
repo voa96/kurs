@@ -15,32 +15,36 @@ let idTarget
 
 const gameInfo = [
     {
-        name:'gta5',
-        card: {rec: '1', min : '2',},
-        processor: {rec: '',min: ''},
-        access:{rec: '', min: ''},
-        motherBoard: {rec: '', min: ''},
-        ssd:{rec:'',min:''},
-        powerUnit: {rec: '',min:''},
-        body: {rec: '',min:''},
-        productiveRec: {low: '300 FPS', medium: '200 FPS', high: '100 FPS',max: '30 FPS'},
-        productiveMin: {low: '100 FPS', medium: '80 FPS', high: '50 FPS',max: '20 FPS'},
+        name: 'gta5',
+        card: {rec: 'NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT',min: 'NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT'},
+        processor: {rec: 'AMD Ryzen 7 7800X3D / Intel Core i7-13700K',min: 'Intel Core i5-12400F / AMD Ryzen 5 5600'},
+        access: {rec: '32 GB (2x16) DDR5', min: '16 GB (2x8) DDR4'},
+        motherBoard: {rec: 'Z790 / B650',min: 'B660 / B550'},
+        ssd: {rec: 'NVMe SSD 1 ТБ (PCIe 4.0)',min: 'SSD 500 GB (SATA или NVMe)'},
+        powerUnit: {rec: 'Блок питания 750W (80+ Gold)',min: 'Блок питания 550W (80+ Bronze)'},
+        body: {rec: 'Корпус с хорошей вентиляцией и 3-4 вентиляторами',min: 'Корпус Midi-Tower с 2 вентиляторами'},
+        productiveRec: {low: '200+ FPS',medium: '180+ FPS', high: '150+ FPS',max: '120+ FPS'},
+        productiveMin: {low: '100+ FPS',medium: '80+ FPS',high: '70+ FPS',max: '60+ FPS'},
+        priceSell:{rec: '200 000 руб', min:'110 000 руб'},
+        priceBuy:{rec: '~177 000', min: '~ 95 000'},
         titleName: 'Grand Theft Auto V',
         img: 'https://i.playground.ru/p/axyE4V_QXmwLFJUJ05q7uQ.jpeg',
         gameText:'Grand Theft Auto V — это не просто игра, это живая платформа. Несмотря на возраст, благодаря гениальной работе Rockstar и невероятному сообществу моддеров, Лос-Сантос продолжает удивлять. Сегодня в GTA V можно увидеть то, о чем мы не могли и мечтать в 2015 году: фотореалистичные графические моды, дополнения с машинами и оружием нового поколения, полный перезапуск физики и масштабные ролевые проекты.',
     },
     {
-        name:'gta6',
-        card: {rec: '3', min : '4',},
-        processor: {rec: '',min: ''},
-        access:{rec: '', min: ''},
-        motherBoard: {rec: '', min: ''},
-        ssd:{rec:'',min:''},
-        powerUnit: {rec: '',min:''},
-        body: {rec: '',min:''},
-        productiveRec: {low: '300 FPS', medium: '200 FPS', high: '100 FPS',max: '30 FPS'},
-        productiveMin: {low: '100 FPS', medium: '80 FPS', high: '50 FPS',max: '20 FPS'},
-        titleName: 'Grand Theft Auto 6',
+        name: 'gta6',
+        card: {rec: 'NVIDIA GeForce RTX 5090 / AMD Radeon RX 7900 XTX',min: 'NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT'},
+        processor: {rec: 'AMD Ryzen 7 7800X3D / Intel Core i7-13700K',min: 'Intel Core i5-12600K / AMD Ryzen 5 5600X'},
+        access: { rec: '64 GB (2x32) DDR5', min: '32 GB (2x16) DDR5'},
+        motherBoard: { rec: 'X670E / Z790', min: 'B650 / B760'},
+        ssd: { rec: 'NVMe SSD 2 ТБ (PCIe 4.0/5.0)', min: 'NVMe SSD 1 ТБ' },
+        powerUnit: { rec: '1000W (80+ Platinum)', min: '750W (80+ Gold)' },
+        body: { rec: 'Full-Tower', min: 'Midi-Tower' },
+        productiveRec: { low: '200+ FPS', medium: '160+ FPS', high: '120+ FPS', max: '80+ FPS' },
+        productiveMin: { low: '120+ FPS', medium: '90+ FPS', high: '70+ FPS', max: '60+ FPS' },
+        priceSell: { rec: '430 000 руб', min: '180 000 руб' },
+        priceBuy: { rec: '~355 000', min: '~149 000' },
+        titleName: 'Grand Theft Auto VI',
         img: 'https://i.ytimg.com/vi/REP0dcYFP9Q/maxresdefault.jpg',
         gameText:'Grand Theft Auto VI игра в жанре action-adventure с открытым миром, разрабатываемая компанией Rockstar Games. Станет шестнадцатой по счёту и восьмой крупной игрой в серии Grand Theft Auto. ',
     },
@@ -52,6 +56,12 @@ function switchmin(){
     },10)
     const gameInfoObject = gameInfo.find((item) => item.name === idTarget);
     ModalWin.querySelector('.card').textContent = gameInfoObject.card.min
+    ModalWin.querySelector('.processor').textContent = gameInfoObject.processor.min
+    ModalWin.querySelector('.access').textContent = gameInfoObject.access.min
+    ModalWin.querySelector('.motherBoard').textContent = gameInfoObject.motherBoard.min
+    ModalWin.querySelector('.ssd').textContent = gameInfoObject.ssd.min
+    ModalWin.querySelector('.powerUnit').textContent = gameInfoObject.powerUnit.min
+    ModalWin.querySelector('.body').textContent = gameInfoObject.body.min
     ModalWin.querySelector('.productivityLow').textContent = gameInfoObject.productiveMin.low
     ModalWin.querySelector('.productivityMedium').textContent = gameInfoObject.productiveMin.medium
     ModalWin.querySelector('.productivityHigh').textContent = gameInfoObject.productiveMin.high
@@ -65,6 +75,12 @@ function switchmax(){
     const gameInfoObject = gameInfo.find((item) => item.name === idTarget);
     console.log(gameInfoObject);
     ModalWin.querySelector('.card').textContent = gameInfoObject.card.rec
+    ModalWin.querySelector('.processor').textContent = gameInfoObject.processor.rec
+    ModalWin.querySelector('.access').textContent = gameInfoObject.access.rec
+    ModalWin.querySelector('.motherBoard').textContent = gameInfoObject.motherBoard.rec
+    ModalWin.querySelector('.ssd').textContent = gameInfoObject.ssd.rec
+    ModalWin.querySelector('.powerUnit').textContent = gameInfoObject.powerUnit.rec
+    ModalWin.querySelector('.body').textContent = gameInfoObject.body.rec
     ModalWin.querySelector('.productivityLow').textContent = gameInfoObject.productiveRec.low
     ModalWin.querySelector('.productivityMedium').textContent = gameInfoObject.productiveRec.medium
     ModalWin.querySelector('.productivityHigh').textContent = gameInfoObject.productiveRec.high
@@ -84,8 +100,6 @@ function CloseModal(){
 
 
 
-
-// slider
 const allSliders = [];
 
 // Функция создания слайдера
@@ -156,6 +170,7 @@ function createSlider(gameBlock) {
             const gameInfoObject = gameInfo.find((item) => item.name === idTarget);
             ModalWin.querySelector('.game_text').textContent = gameInfoObject.gameText
             ModalWin.querySelector('.img_game').src = gameInfoObject.img
+            ModalWin.querySelector('.name_game').textContent = gameInfoObject.titleName
             switchmax()
         });
         
