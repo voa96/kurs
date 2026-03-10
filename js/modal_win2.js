@@ -48,6 +48,64 @@ const gameInfo = [
         img: 'https://i.ytimg.com/vi/REP0dcYFP9Q/maxresdefault.jpg',
         gameText:'Grand Theft Auto VI игра в жанре action-adventure с открытым миром, разрабатываемая компанией Rockstar Games. Станет шестнадцатой по счёту и восьмой крупной игрой в серии Grand Theft Auto. ',
     },
+    {
+        name: 'CS2',
+        card: {rec: 'NVIDIA GeForce RTX 5070 / AMD Radeon RX 9060 XT',min: 'AMD Radeon RX 6600 / Intel Arc B580'},
+        processor: {rec: 'AMD Ryzen 7 7800X3D / Intel Core i7-13700K',min: 'Intel Core i3-14100F / AMD Ryzen 5 5500'},
+        access: { rec: '32 GB (2x16) DDR5', min: '16 GB (2x8) DDR4' },
+        motherBoard: { rec: 'B650 / Z790', min: 'B660 / B550 / B760M' },
+        ssd: { rec: 'NVMe SSD 1 ТБ (PCIe 4.0)', min: 'NVMe SSD 512 ГБ (PCIe 3.0)' },
+        powerUnit: { rec: '750W (80+ Gold)', min: '550W (80+ Bronze)' },
+        body: { rec: 'Midi-Tower с хорошей вентиляцией', min: 'Midi-Tower' },
+        productiveRec: { low: '400+ FPS', medium: '350+ FPS', high: '300+ FPS', max: '240+ FPS' },
+        productiveMin: { low: '200+ FPS', medium: '150+ FPS', high: '120+ FPS', max: '100+ FPS' },
+        priceSell: { rec: '200 000 руб', min: '85 000 руб' },
+        priceBuy: { rec: '~160 000 руб', min: '~70 000 руб' },
+        titleName: 'Counter-Strike 2',
+        img: 'https://avatars.mds.yandex.net/get-entity_search/1880293/795741416/S600xU_2x',
+        gameText:'Counter-Strike 2 (сокр. CS2; с англ. — «Контрудар 2») — компьютерная игра в жанре многопользовательского тактического шутера от первого лица, разработанная компанией Valve. Это 5-я игра в серии Counter-Strike, заявляется как бесплатное обновление к Counter-Strike: Global Offensive (CS:GO)',
+    },
+    {
+    name: 'dota2',
+    card: {rec: 'NVIDIA GeForce RTX 3060 / AMD Radeon RX 6650 XT',min: 'NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 560'},
+    processor: {rec: 'Intel Core i5-12400F / AMD Ryzen 5 5600',min: 'Intel Core i3-10105 / AMD Ryzen 3 3200G'},
+    access: { rec: '16 GB (2x8) DDR4', min: '8 GB (2x4) DDR4' },
+    motherBoard: { rec: 'B660 / B550', min: 'H610 / A520' },
+    ssd: { rec: 'NVMe SSD 512 ГБ (PCIe 3.0)', min: 'SSD 256 ГБ (SATA)' },
+    powerUnit: { rec: '550W (80+ Bronze)', min: '400W' },
+    body: { rec: 'Midi-Tower', min: 'Midi-Tower' },
+    productiveRec: { low: '200+ FPS', medium: '150+ FPS', high: '120+ FPS', max: '100+ FPS' },
+    productiveMin: { low: '100+ FPS', medium: '80+ FPS', high: '60+ FPS', max: '40+ FPS' },
+    priceSell: { rec: '95 000 руб', min: '55 000 руб' },
+    priceBuy: { rec: '~80 000 руб', min: '~45 000 руб' },
+    titleName: 'Dota 2',
+    img: '---',
+    gameText:'Dota 2 — это культовая многопользовательская игра в жанре MOBA, разработанная компанией Valve. Стратегическая глубина, тысячи часов баланса и непредсказуемые командные сражения сделали её одной из самых популярных игр в мире. В 2026 году Dota 2 продолжает эволюционировать с новыми героями, патчами и турнирами, оставаясь главным вызовом для миллионов игроков по всему миру.',
+},
+{
+    name: 'rust',
+    card: {
+        rec: 'NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT / Intel Arc B580',
+        min: 'NVIDIA GeForce GTX 1060 / AMD Radeon RX 470 / Intel Arc A580'
+    },
+    processor: {
+        rec: 'AMD Ryzen 5 3600 / Intel Core i7-6700K',
+        min: 'Intel Core i5-6600 / AMD Ryzen 5 1400'
+    },
+    access: { rec: '16 GB (2x8) DDR4', min: '12 GB (2x6) DDR4' },
+    motherBoard: { rec: 'B550 / B660', min: 'A320 / H510' },
+    ssd: { rec: 'NVMe SSD 500 ГБ (PCIe 3.0) — обязательно', min: 'SSD 500 ГБ (SATA) — настоятельно рекомендуется' },
+    powerUnit: { rec: '650W (80+ Bronze)', min: '550W (80+ Bronze)' },
+    body: { rec: 'Midi-Tower с хорошей вентиляцией', min: 'Midi-Tower' },
+    productiveRec: { low: '120+ FPS', medium: '90+ FPS', high: '70+ FPS', max: '60+ FPS' },
+    productiveMin: { low: '60+ FPS', medium: '50+ FPS', high: '40+ FPS', max: '30+ FPS' },
+    priceSell: { rec: '110 000 руб', min: '70 000 руб' },
+    priceBuy: { rec: '~90 000 руб', min: '~58 000 руб' },
+    titleName: 'Rust',
+    img: '',
+    gameText:'Rust — это жестокая игра на выживание в открытом мире от британской студии Facepunch, где единственная цель — выжить любой ценой [citation:1][citation:4]. Игроки начинают голыми с камнем и факелом в руках, а главную угрозу представляют не дикие животные или радиация, а другие игроки [citation:1][citation:4]. Здесь можно строить базы, крафтить оружие от луков до автоматов Калашникова, объединяться в кланы и рейдить чужие укрепления [citation:3][citation:7]. Мир процедурно генерируется, а обновления выходят каждый месяц, поддерживая игру свежей даже спустя годы [citation:3][citation:6]. Комьюнити славится своей токсичностью, но именно это создаёт ту самую атмосферу дикого выживания, где нет правил, кроме одного — не умри [citation:3][citation:6].'
+}
+
 ]
 function switchmin(){
     setTimeout(() => {
