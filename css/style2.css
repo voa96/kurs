@@ -1,3 +1,24 @@
+@font-face {
+    font-family: teehee;
+    src: url(/шрифты/teehee/TeeheeTownrg.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
+@font-face {
+    font-family: carvist;
+    src: url(/шрифты/carvist/TT\ Carvist\ Trial\ Bold.ttf);
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
+@font-face {
+    font-family: gymkhana;
+    src: url(/шрифты/gymkhana/gymkhana-bk.ttf);
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
 *{
     margin: 0;
     padding: 0;
@@ -239,9 +260,10 @@ main{
 
 .game_info{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(3,1fr);
     padding: 10px 20px;
     gap: 20px;
+    
 }
 .dame_list_wrapper{
     display: grid;
@@ -259,9 +281,10 @@ main{
 }
 .game_screen_slaider img{
     width: 100%;
+    height: 300px;
     padding: 10px 20px;
     border-radius: 40px;
-    object-fit: cover;
+    /* object-fit: cover; */
     position: relative;
     
 }
@@ -297,16 +320,18 @@ main{
 .game_screen{
     overflow: hidden;
 }
-.game_info{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
 .open_modal{
     width: 100%;
+    max-width: 250px;
     background-color: #074396;
     color: white;
     border: transparent;
     padding: 10px 0px;
     border-radius: 10px;
     cursor: pointer;
+    font-family: gymkhana;
+}
+.game{
+    text-align: center;
+    font-family: gymkhana;
 }
